@@ -15,6 +15,13 @@ class CreateDatabarangsTable extends Migration
     {
         Schema::create('databarangs', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('code_barang')->unique();
+            $table->string('nama_barang');
+            $table->string('tanggal');
+            $table->string('images');
+            $table->string('jumlah_barang');
+            $table->string('harga_beli');
+            $table->string('harga_jual');
             $table->timestamps();
         });
     }

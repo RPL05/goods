@@ -34,7 +34,12 @@
                                 <td>{{ $suplier->email }}</td>
                                 <td>{{ $suplier->telepon }}</td>
                                 <td>
-                                    <a href="{{ route('data.suplier.show-formEdit', $suplier->id) }}" class="btn btn-outline-primary btn-sm">Edit</a>
+                                    <form action="{{ route('data.suplier.delete', $suplier->id) }}" method="post">
+                                        @csrf
+                                        @method('DELETE')
+                                            <a href="{{ route('data.suplier.show-formEdit', $suplier->id) }}" class="btn btn-outline-info btn-sm">Edit</a>
+                                        <button class="btn btn-outline-danger btn-sm">Hapus</button>
+                                    </form>
                                 </td>
                             </tr>
                             @endforeach

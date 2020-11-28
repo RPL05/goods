@@ -37,13 +37,13 @@
                             <a href="{{ route('data.suplier.index') }}" class="nav-link">Suplier</a>
                         </li>
                         <li class="nav-item">
-                            <a href="http://" class="nav-link">Data Barang</a>
+                            <a href="{{ route('data.barang.index') }}" class="nav-link">Data Barang</a>
                         </li>
                         <li class="nav-item">
-                            <a href="http://" class="nav-link">Barang Masuk</a>
+                            <a href="{{ route('barangmasuk.index') }}" class="nav-link">Barang Masuk</a>
                         </li>
                         <li class="nav-item">
-                            <a href="http://" class="nav-link">Barang Keluar</a>
+                            <a href="{{ route('barangkeluar.index') }}" class="nav-link">Barang Keluar</a>
                         </li>
                         <li class="nav-item">
                             <a href="http://" class="nav-link">laporan</a>

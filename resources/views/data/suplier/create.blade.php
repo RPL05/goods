@@ -1,6 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="d-flex justify-content-center py-3">
+    <h4 class="text-muted">From Tambah Suplier</h4>
+</div>
 <div class="container">
     <div class="row d-flex justify-content-center">
         <div class="col-md-8">
@@ -44,9 +47,9 @@
                             </div>
                             <div class="px-3 py-2">
                                 <button type="submit" class="btn btn-outline-info" >
-                                    Save
+                                    Tambah Suplier
                                 </button>
-                                <a href="{{route('data.suplier.index')}}" class="btn btn-outline-secondary">Kembali</a>
+                                <a href="{{route('data.suplier.index')}}" class="btn btn-outline-secondary">Cancel</a>
                             </div>
                         </div>
                     </form>

@@ -36,7 +36,7 @@ class SuplierController extends Controller
             'telepon'        => $request->telepon,
         ]);
 
-        return redirect()->back()->with(['success' => 'data suplier berhasil dibuat' ]);
+        return redirect()->back()->with(['success' => 'data suplier berhasil ditambahkan' ]);
     }
     public function edit($id)
     {
@@ -50,5 +50,13 @@ class SuplierController extends Controller
         $suplier->update($request-> all());
 
         return redirect()->back()->with(['success' => 'data suplier berhasil diedit' ]);
+    }
+    public function destroy($id)
+    {
+        $suplier = Suplier::find($id);
+
+        $suplier->delete($suplier-> all());
+
+        return redirect()->back();
     }
 }
