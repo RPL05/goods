@@ -19,9 +19,8 @@ class CreateDatabarangsTable extends Migration
             $table->string('nama_barang');
             $table->string('tanggal');
             $table->string('images');
-            $table->string('jumlah_barang');
-            $table->string('harga_beli');
-            $table->string('harga_jual');
+            $table->string('stock');
+            $table->string('harga');
             $table->timestamps();
         });
     }

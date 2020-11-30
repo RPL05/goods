@@ -57,3 +57,12 @@ Route::group(['prefix' => 'barangkeluars'], function(){
     Route::put('update/{barangkeluar}','BarangkeluarController@update')->name('barangkeluar.update');
     Route::delete('delete/{barangkeluar}','BarangkeluarController@destroy')->name('barangkeluar.delete');
 });
+
+Route::group(['prefix' => 'users'], function(){
+    Route::get('index','UserController@index')->name('data.user.index');
+});
+
+Route::group(['prefix' => 'rekap'], function(){
+    Route::get('laporan-barangmasuk','BarangmasukController@rekap')->name('rekap.laporan-barangmasuk');
+    Route::get('laporan-barangkeluar','BarangkeluarController@rekap')->name('rekap.laporan-barangkeluar');
+});

@@ -5,9 +5,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="mb-3">
-                <a href="{{ route('barangkeluar.create') }}" class="btn btn-outline-info">
-                    Tambah Barang Keluar
-                </a>
+                <a href="{{route('rekap.laporan-barangkeluar')}}" class="btn btn-info" style="margin-left: 987px;">Rekap Laporan</a>
             </div>
             <div class="card border-0">
                 <div class="px-3 py-3">

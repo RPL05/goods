@@ -9,7 +9,7 @@ class Suplier extends Model
     protected $table = 'supliers';
     protected $guarded = [];
 
-    public function barangmasuk()
+    public function barangmasuks()
     {
         return $this->hasMany(Barangmasuk::class);
     }

@@ -23,7 +23,7 @@ class Databarang extends Model
             ]
         ];
     }
-    public function barangmasuk()
+    public function barangmasuks()
     {
         return $this->hasMany(Barangmasuk::class);
     }

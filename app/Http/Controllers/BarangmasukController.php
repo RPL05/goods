@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use PDF;
 use App\Barangmasuk;
 use App\Databarang;
 use App\Suplier;
@@ -88,5 +89,17 @@ class BarangmasukController extends Controller
             \File::delete(public_path('storage/'. $barangmasuk->images));
         }
         return redirect()->back();
+    }
+    public function rekap()
+    {
+        $supliers = Suplier::all();
+
+        $databarangs = Databarang::all();
+
+        $barangmasuks = Barangmasuk::get();
+
+        $pdf = PDF::loadView('barangmasuk.rekap', compact('barangmasuks','databarangs','supliers'))->setPaper('a4', 'landscape');
+
+        return $pdf->stream('rekap_laporan_barangmasuk.pdf');
     }
 }

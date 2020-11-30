@@ -47,23 +47,16 @@
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="jumlah_barang">Jumlah Barang</label>
-                            <input type="number" name="jumlah_barang" id="jumlah_barang" value="" class="form-control" required>
-                            <span class="text-danger" id="jumlah_barang"></span>
+                            <label for="stock">Stock</label>
+                            <input type="number" name="stock" id="stock" value="" class="form-control" required>
+                            <span class="text-danger" id="stock"></span>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="harga_beli">Harga Beli</label>
-                            <input type="text" name="harga_beli" id="harga_beli" value="" class="form-control" required>
-                            <span class="text-danger" id="harga_beli"></span>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="harga_jual">Harga Jual</label>
-                            <input type="text" name="harga_jual" id="harga_jual" value="" class="form-control" required>
-                            <span class="text-danger" id="harga_jual"></span>
+                            <label for="harga">Harga</label>
+                            <input type="text" name="harga" id="harga" value="" class="form-control" required>
+                            <span class="text-danger" id="harga"></span>
                         </div>
                     </div>
                 </div>

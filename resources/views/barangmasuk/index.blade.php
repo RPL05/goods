@@ -4,10 +4,13 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <div class="mb-3">
-                <a href="{{ route('barangmasuk.create') }}" class="btn btn-outline-info">
+                <div class="d-flex mb-3">
+                    <a href="{{ route('barangmasuk.create') }}" class="btn btn-outline-info">
                         Tambah Barang Masuk
                     </a>
+                    <div>
+                        <a href="{{route('rekap.laporan-barangmasuk')}}" class="btn btn-info" style="margin-left: 813px;">Rekap Laporan</a>
+                    </div>
                 </div>
                 <div class="card border-0">
                     <div class="px-3 py-3">
@@ -22,8 +25,6 @@
                                     <th>Suplier</th>
                                     <th>Images</th>
                                     <th>Jumlah Barang Masuk</th>
-                                    <th>Harga Jual</th>
-                                    <th>Harga Beli</th>
                                     <th>Total Harga</th>
                                     <th>Action</th>
                                 </tr>
@@ -38,15 +39,16 @@
                                         @foreach($supliers as $suplier)
                                             <td>{{ $suplier->nama_suplier }}</td>
                                         @endforeach
-                                    <td><img src="{{asset('storage/'. $barangmasuk->images)}}" width="40px" height="40px" alt=""></td>
+                                    <td><img src="{{asset('storage/'. $barangmasuk->images)}}" width="40px" height="40px" alt=""> </td>
                                     <td>{{ $barangmasuk->jumlah_barangmsk }}</td>
-                                    <td>{{ $barangmasuk->harga_jual }}</td>
-                                    <td>{{ $barangmasuk->harga_beli }}</td>
                                     <td>{{ $barangmasuk->total_harga }}</td>
                                     <td>
                                         <form action="{{ route('barangmasuk.delete', $barangmasuk->id, $databarang->id, $suplier->id) }}" method="post">
                                             @csrf
                                             @method('DELETE')
+                                            <a href="{{ route('barangkeluar.create') }}" class="btn btn-outline-success btn-sm">
+                                                dibeli
+                                            </a>
                                             <a href="{{ route('barangmasuk.edit', $barangmasuk->id, $databarang->id, $suplier->id) }}" class="btn btn-outline-info btn-sm">Edit</a>
                                             <button class="btn btn-outline-danger btn-sm">Hapus</button>
                                         </form>

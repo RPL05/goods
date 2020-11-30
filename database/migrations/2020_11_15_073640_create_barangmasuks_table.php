@@ -19,8 +19,6 @@ class CreateBarangmasuksTable extends Migration
             $table->unsignedInteger('suplier_id');
             $table->string('images');
             $table->string('jumlah_barangmsk');
-            $table->string('harga_beli');
-            $table->string('harga_jual');
             $table->string('total_harga');
             $table->timestamps();
         });

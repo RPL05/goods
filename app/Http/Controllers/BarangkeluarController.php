@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use PDF;
 use App\Barangkeluar;
 use App\Databarang;
 use Intervention\Image\Facades\Image;
@@ -78,5 +79,15 @@ class BarangkeluarController extends Controller
             \File::delete(public_path('storage/'. $barangkeluar->images));
         }
         return redirect()->back();
+    }
+    public function rekap()
+    {
+        $databarangs = Databarang::all();
+
+        $barangkeluars = Barangkeluar::get();
+
+        $pdf = PDF::loadView('barangkeluar.rekap', compact('barangkeluars','databarangs'))->setPaper('a4', 'landscape');
+
+        return $pdf->stream('rekap_laporan_barangkeluar.pdf');
     }
 }

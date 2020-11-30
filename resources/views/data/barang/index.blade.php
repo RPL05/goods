@@ -21,9 +21,8 @@
                                 <th>Nama Barang</th>
                                 <th>Tanggal</th>
                                 <th>Images</th>
-                                <th>Jumlah Barang</th>
-                                <th>Harga Beli</th>
-                                <th>Harga Jual</th>
+                                <th>Stock</th>
+                                <th>Harga</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -34,9 +33,8 @@
                                 <td>{{ $databarang->nama_barang }}</td>
                                 <td>{{ $databarang->tanggal }}</td>
                                 <td><img src="{{asset('storage/'. $databarang->images)}}" width="40px" height="40px" alt=""></td>
-                                <td>{{ $databarang->jumlah_barang }}</td>
-                                <td>{{ $databarang->harga_beli }}</td>
-                                <td>{{ $databarang->harga_jual }}</td>
+                                <td>{{ $databarang->stock }}</td>
+                                <td>{{ $databarang->harga }}</td>
                                 <td>
                                     <form action="{{ route('data.barang.delete', $databarang->id) }}" method="post">
                                         @csrf

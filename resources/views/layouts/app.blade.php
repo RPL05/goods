@@ -46,10 +46,7 @@
                             <a href="{{ route('barangkeluar.index') }}" class="nav-link">Barang Keluar</a>
                         </li>
                         <li class="nav-item">
-                            <a href="http://" class="nav-link">laporan</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="http://" class="nav-link">Data User</a>
+                            <a href="{{ route('data.user.index') }}" class="nav-link">Data User</a>
                         </li>
                     </ul>
 

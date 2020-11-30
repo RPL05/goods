@@ -33,9 +33,8 @@ class DatabarangController extends Controller
             'nama_barang'        => 'required',
             'tanggal'            => 'required',
             'images'             => 'required|file|image|max:5000',
-            'jumlah_barang'      => 'required',
-            'harga_beli'         => 'required',
-            'harga_jual'         => 'required',
+            'stock'              => 'required',
+            'harga'              => 'required',
         ]), function(){
             if(request()->hasFile('images')){
                 request()->validate([
